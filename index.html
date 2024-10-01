@@ -4,118 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transformation Day</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <title>Iniciar Sesión</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- Incluye las bibliotecas de Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <!-- Enlaza el archivo app.js que contiene la lógica de autenticación -->
+    <script src="js/firebaseauth.js" defer></script>
+    <link rel="stylesheet" href="css/login.css">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <a href="" class="active">emergia</a>
-        </nav>
-    </header>
-    <div class="carousel">
-        <div class="list">
-            <div class="item" style="background-image: url(image/6.png);">
-
-                <div class="content">
-                    <div class="title">IA</div>
-                    <div class="name">Generativa</div>
-                    <div class="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique
-                        consequuntur, reprehenderit dicta repudiandae.</div>
-                    <div class="btn">
-                        <button>Ver mas</button>
-                        <!-- <button>Subscribe</button> -->
-                    </div>
-                </div>
-
+    <div class="container-login-form mx-auto">
+        <img src="/image/Logo emergia.png" alt="Inicio de Sesión" style="width: 200px; margin-bottom: 25px;">
+        <form id="login-form">
+            <div id="signInMessage" class="messageDiv" style="display:none;"></div>
+            <div class="input-group-login-form">
+                <i class="fas fa-envelope"></i>
+                <label for="email" class="sr-only">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Correo electronico" required>
             </div>
-
-            <div class="item" style="background-image: url(image/1.png);">
-
-                <div class="content">
-                    <div class="title">Investigación de</div>
-                    <div class="name">Mercados</div>
-                    <div class="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique
-                        consequuntur, reprehenderit dicta repudiandae.</div>
-                    <div class="btn">
-                        <button>Ver mas</button>
-                        <!-- <button>Subscribe</button> -->
-                    </div>
-                </div>
-
+            <div class="input-group-login-form">
+                <i class="fas fa-lock"></i>
+                <label for="password" class="sr-only">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Contraseña" required>
             </div>
-
-            <div class="item" style="background-image: url(image/2.png);">
-
-                <div class="content">
-                    <div class="title">PAC</div>
-                    <div class="name">V2</div>
-                    <div class="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique
-                        consequuntur, reprehenderit dicta repudiandae.</div>
-                    <div class="btn">
-                        <button>Ver mas</button>
-                        <!-- <button>Subscribe</button> -->
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="item" style="background-image: url(image/3.png);">
-
-                <div class="content">
-                    <div class="title">Conocimiento y <br> Gestion</div>
-                    <div class="name">Inteligente del <br> Cliente</div>
-                    <div class="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique
-                        consequuntur, reprehenderit dicta repudiandae.</div>
-                    <div class="btn">
-                        <button>Ver mas</button>
-                        <!-- <button>Subscribe</button> -->
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="item" style="background-image: url(image/4.png);">
-
-                <div class="content">
-                    <div class="title">Smart</div>
-                    <div class="name">Communication</div>
-                    <div class="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique
-                        consequuntur, reprehenderit dicta repudiandae.</div>
-                    <div class="btn">
-                        <button>Ver mas</button>
-                        <!-- <button>Subscribe</button> -->
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="item" style="background-image: url(image/5.png);">
-
-                <div class="content">
-                    <div class="title">Modelos de Analítica</div>
-                    <div class="name">Predictiva</div>
-                    <div class="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique
-                        consequuntur, reprehenderit dicta repudiandae.</div>
-                    <div class="btn">
-                        <button>Ver mas</button>
-                        <!-- <button>Subscribe</button> -->
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <!--next prev button-->
-        <div class="arrows">
-            <button class="prev"><i class="fas fa-arrow-left"></i></button>
-            <button class="next"><i class="fas fa-arrow-right"></i></button>
-        </div>
-        <!-- time running -->
-        <!-- <div class="timeRunning"></div> -->
+            <button type="submit" class="btn btn-primary" id="submitSignIn">Iniciar Sesión</button>
+        </form>
     </div>
-    <script src="app.js"></script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>

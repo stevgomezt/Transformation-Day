@@ -1,0 +1,77 @@
+.container-login-form {
+    max-width: 700px;
+    width: 700px;
+    margin-top: 50px;
+    margin-left: auto; /* Alinea el formulario a la derecha */
+    text-align: center;
+    background: rgb(255, 255, 255);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-title-login-form {
+    margin-bottom: 30px;
+}
+
+.input-group-login-form {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-group-login-form i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+}
+
+.form-control {
+    padding-left: 35px;
+}
+
+.btn {
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end !important; /* Alinea el formulario a la derecha */
+    align-items: center !important; /* Centra verticalmente */
+    padding: 0;
+    background-color: var(--color-primary);
+    background-image: url("/image/td.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #f9f9f9;
+    animation: rotate 6s infinite alternate linear;
+}
+
+.container-login-form {
+    max-width: 500px;
+    width: 500px;
+    background: rgb(255, 255, 255);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-right: 10% !important; /* Forza la alineación a la derecha */
+    margin-left: auto !important; /* Asegura que se mantenga a la derecha */
+}
+
+.input-group-login-form {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+.input-group-login-form i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #999;
+}
+.input-group-login-form input {
+    padding-left: 2.5rem;
+}
